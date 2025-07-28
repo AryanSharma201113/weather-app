@@ -1,92 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aura Weather</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="first.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="dark-theme">
-    <div class="container">
-        <div class="current-weather-panel">
-            <div class="panel-header">
-                <div class="search">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" placeholder="Enter city name" spellcheck="false" />
-                    <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <button class="add-favorite-btn" aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="card">
+      <div class="search">
+        <input type="text" placeholder="enter city name" spellcheck="false" />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="error">
+        <p>Enter a valid city name</p>
+      </div>
+      <div class="weather">
+        <img
+          src="https://www.freeiconspng.com/thumbs/weather-icon-png/weather-icon-png-8.png"
+          class="weather-icon"
+          alt=""
+        />
+        <h1 class="temp">22' C</h1>
+        <h2 class="city">Delhi</h2>
+        <div class="detalis">
+          <div class="col1">
+            <img
+              src="https://static-00.iconduck.com/assets.00/humidity-icon-512x419-5m7ztixz.png"
+              class="img2"
+              alt=""
+            />
+            <div>
+              <p class="humidity">50%</p>
+              <p>Humidity</p>
             </div>
-            <div class="weather-body">
-                <div class="error"><p>City not found.</p></div>
-                <div class="loader"></div>
-                <div class="weather-info">
-                    <img src="" class="weather-icon" alt="Weather Icon" />
-                    <p class="weather-desc"></p>
-                    <h1 class="temp"></h1>
-                    <h2 class="city"></h2>
-                    <p class="date"></p>
-                </div>
+          </div>
+          <div class="col2">
+            <img
+              src="https://www.onlygfx.com/wp-content/uploads/2022/01/wind-blowing-palm-trees-silhouette-5411.png"
+              class="img3"
+              alt=""
+            />
+            <div>
+              <p class="wind">15 kmph</p>
+              <p>Wind Speed</p>
             </div>
-            <div class="saved-locations">
-                <h4>Favorite Locations</h4>
-                <div class="locations-container">
-                    </div>
-            </div>
+          </div>
         </div>
-
-        <div class="details-panel">
-            <div class="panel-header">
-                <h3>Today's Highlights</h3>
-                <div class="controls">
-                    <div class="units-toggle">
-                        <label class="switch">
-                            <input type="checkbox" id="unit-switch">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    <button class="theme-toggle-btn" aria-label="Toggle theme">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="highlights">
-                <div class="card feels-like">
-                    <p class="card-title">Feels Like</p><i class="fa-solid fa-temperature-half card-icon"></i><p class="card-value"></p>
-                </div>
-                <div class="card humidity">
-                    <p class="card-title">Humidity</p><i class="fa-solid fa-droplet card-icon"></i><p class="card-value"></p>
-                </div>
-                <div class="card wind-speed">
-                    <p class="card-title">Wind Speed</p><i class="fa-solid fa-wind card-icon"></i><p class="card-value"></p>
-                </div>
-                 <div class="card sunrise">
-                    <p class="card-title">Sunrise</p><i class="fa-solid fa-sun card-icon"></i><p class="card-value"></p>
-                </div>
-                 <div class="card sunset">
-                    <p class="card-title">Sunset</p><i class="fa-solid fa-moon card-icon"></i><p class="card-value"></p>
-                </div>
-                <div class="card aqi">
-                    <p class="card-title">Air Quality</p><i class="fa-solid fa-smog card-icon"></i><p class="card-value"></p>
-                </div>
-            </div>
-
-            <div class="forecast-section">
-                <h3>Hourly Forecast</h3>
-                <div class="chart-container">
-                    <canvas id="hourly-chart"></canvas>
-                </div>
-                <p class="last-updated">Last updated: </p>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="first.js"></script>
-</body>
+  </body>
 </html>

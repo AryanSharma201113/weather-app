@@ -19,7 +19,6 @@
           <i class="fa-solid fa-location-dot"></i>
           <input type="text" id="city-input" placeholder="Enter city name" spellcheck="false" />
           <button id="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-          <ul class="city-dropdown"></ul>
         </div>
         <button class="add-favorite-btn" aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></button>
       </div>
@@ -42,44 +41,18 @@
     <div class="details-panel">
       <div class="panel-header">
         <h3>Today's Highlights</h3>
-        <div class="controls">
-          <div class="units-toggle">
-            <label class="switch">
-              <input type="checkbox" id="unit-switch">
-              <span class="slider"></span>
-            </label>
-          </div>
-          <button class="theme-toggle-btn" aria-label="Toggle theme">
-            <i class="fa-solid fa-sun"></i>
-            <i class="fa-solid fa-moon"></i>
-          </button>
-        </div>
       </div>
       <div class="highlights">
-        <div class="card feels-like">
-          <p class="card-title">Feels Like</p><i class="fa-solid fa-temperature-half card-icon"></i><p class="card-value"></p>
-        </div>
-        <div class="card humidity">
-          <p class="card-title">Humidity</p><i class="fa-solid fa-droplet card-icon"></i><p class="card-value"></p>
-        </div>
-        <div class="card wind-speed">
-          <p class="card-title">Wind Speed</p><i class="fa-solid fa-wind card-icon"></i><p class="card-value"></p>
-        </div>
-        <div class="card sunrise">
-          <p class="card-title">Sunrise</p><i class="fa-solid fa-sun card-icon"></i><p class="card-value"></p>
-        </div>
-        <div class="card sunset">
-          <p class="card-title">Sunset</p><i class="fa-solid fa-moon card-icon"></i><p class="card-value"></p>
-        </div>
-        <div class="card aqi">
-          <p class="card-title">Air Quality</p><i class="fa-solid fa-smog card-icon"></i><p class="card-value"></p>
-        </div>
+        <div class="card feels-like"><p class="card-title">Feels Like</p><i class="fa-solid fa-temperature-half card-icon"></i><p class="card-value"></p></div>
+        <div class="card humidity"><p class="card-title">Humidity</p><i class="fa-solid fa-droplet card-icon"></i><p class="card-value"></p></div>
+        <div class="card wind-speed"><p class="card-title">Wind Speed</p><i class="fa-solid fa-wind card-icon"></i><p class="card-value"></p></div>
+        <div class="card sunrise"><p class="card-title">Sunrise</p><i class="fa-solid fa-sun card-icon"></i><p class="card-value"></p></div>
+        <div class="card sunset"><p class="card-title">Sunset</p><i class="fa-solid fa-moon card-icon"></i><p class="card-value"></p></div>
+        <div class="card aqi"><p class="card-title">Air Quality</p><i class="fa-solid fa-smog card-icon"></i><p class="card-value"></p></div>
       </div>
       <div class="forecast-section">
         <h3>Hourly Forecast</h3>
-        <div class="chart-container">
-          <canvas id="hourly-chart"></canvas>
-        </div>
+        <div class="chart-container"><canvas id="hourly-chart"></canvas></div>
         <p class="last-updated">Last updated: <span class="last-updated-time"></span></p>
       </div>
     </div>

@@ -22,11 +22,11 @@ body {
   width: 100%;
   max-width: 500px;
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -43,7 +43,7 @@ body {
 .search input {
   border: none;
   outline: none;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   color: #333;
   padding: 1rem 1.5rem;
   height: 60px;
@@ -52,10 +52,11 @@ body {
   margin-right: 12px;
   font-size: 1rem;
   transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .search input:focus {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
 .search button {
@@ -70,11 +71,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .search button:hover {
-  background: #d0f5f0;
+  background: #c0f4ed;
+  transform: scale(1.05);
 }
 
 .weather-icon {
@@ -108,7 +111,8 @@ body {
   margin-bottom: 1rem;
 }
 
-.detalis, .cards {
+.detalis,
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -116,16 +120,17 @@ body {
 }
 
 .card-item {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   padding: 1rem;
   border-radius: 1rem;
   text-align: left;
   transition: background 0.3s ease;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .card-item:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .card-title {
@@ -135,7 +140,7 @@ body {
 }
 
 .card-value {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
@@ -143,6 +148,7 @@ body {
   font-size: 0.75rem;
   color: #aaa;
   margin-top: 1rem;
+  font-style: italic;
 }
 
 .loader {
@@ -173,6 +179,8 @@ body {
   background-color: rgba(255, 0, 0, 0.1);
   padding: 0.75rem 1rem;
   border-radius: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
 }
 
 @media (max-width: 600px) {
